@@ -9,10 +9,27 @@ import SwiftUI
 import MapKit
 
 struct ListingDetailView: View {
+	@Environment(\.dismiss) var dismiss
 	var body: some View {
 		ScrollView {
-			ListingImageCarouselView()
-				.frame(height: 320)
+			ZStack (alignment: .topLeading) {
+				ListingImageCarouselView()
+					.frame(height: 320)
+
+				Button {
+					dismiss()
+				}label: {
+					Image(systemName: "chevron.left")
+						.foregroundStyle(.black)
+						.background{
+							Circle()
+								.fill(.white)
+								.frame(width: 32, height: 32)
+						}
+						.padding(32)
+				}
+
+			}
 
 			VStack (alignment: .leading, spacing: 8){
 				Text ("Karachi Pakistan")
@@ -156,6 +173,7 @@ struct ListingDetailView: View {
 			}
 			.padding()
 		}
+		.ignoresSafeArea()
 		.padding(.bottom, 90)
 		.overlay(alignment: .bottom)
 		{
