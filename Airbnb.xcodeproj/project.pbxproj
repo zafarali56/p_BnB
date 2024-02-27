@@ -17,6 +17,7 @@
 		9EE7248A2B8DADE30067332A /* ListingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE724892B8DADE30067332A /* ListingDetailView.swift */; };
 		9EE7248D2B8DAEB70067332A /* ListingImageCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE7248C2B8DAEB70067332A /* ListingImageCarouselView.swift */; };
 		9EE7248F2B8DB2470067332A /* Ratings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE7248E2B8DB2470067332A /* Ratings.swift */; };
+		9EFC33972B8E22EE0014FD22 /* DestinationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFC33962B8E22EE0014FD22 /* DestinationSearchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		9EE724892B8DADE30067332A /* ListingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingDetailView.swift; sourceTree = "<group>"; };
 		9EE7248C2B8DAEB70067332A /* ListingImageCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingImageCarouselView.swift; sourceTree = "<group>"; };
 		9EE7248E2B8DB2470067332A /* Ratings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ratings.swift; sourceTree = "<group>"; };
+		9EFC33962B8E22EE0014FD22 /* DestinationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationSearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +179,7 @@
 			children = (
 				9ED0BCF52B8CFE1900ABFEB1 /* ExploreView.swift */,
 				9EE724872B8DA3AE0067332A /* SearchAndFilterBar.swift */,
+				9EFC33962B8E22EE0014FD22 /* DestinationSearchView.swift */,
 			);
 			path = Explore;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				9E2A17DF2B8C85AA00BE20CE /* ContentView.swift in Sources */,
 				9ED0BCF82B8D14BD00ABFEB1 /* ListingItemView.swift in Sources */,
 				9ED0BCF62B8CFE1900ABFEB1 /* ExploreView.swift in Sources */,
+				9EFC33972B8E22EE0014FD22 /* DestinationSearchView.swift in Sources */,
 				9EE724882B8DA3AE0067332A /* SearchAndFilterBar.swift in Sources */,
 				9EE7248A2B8DADE30067332A /* ListingDetailView.swift in Sources */,
 				9E2A17DD2B8C85AA00BE20CE /* AirbnbApp.swift in Sources */,
