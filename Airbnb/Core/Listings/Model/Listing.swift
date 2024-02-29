@@ -6,16 +6,16 @@
 //
 
 import Foundation
-struct Listing: Identifiable ,Codable {
+struct Listing: Identifiable ,Codable, Hashable {
 	let id: String
 	let ownerId: String
 	let ownerName: String
 	let ownerImageUrl: String
+	let numberOfGuests: Int
 	let numberOfBedrooms: Int
 	let numberOfBathrooms: Int
 	let numberOfBeds: Int
 	let pricePerNight: Int
-	let priePerNight: Int
 	let latitude: Double
 	let longitude: Double
 	var imageURLs: [String]
