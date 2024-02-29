@@ -16,12 +16,26 @@ struct ListingDetailView: View {
 	init(listing: Listing) {
 		self.listing = listing
 
-		let region = MKCoordinateRegion(
-			center: listing.city == "Karachi" ? CLLocationCoordinate2D.karachi : CLLocationCoordinate2D.nawabshah,
-			span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
-		)
+		let targetCoordinate: CLLocationCoordinate2D
+		switch listing.city {
+		case "Karachi":
+			targetCoordinate = CLLocationCoordinate2D.karachi
+		case "Nawabshah":
+			targetCoordinate = CLLocationCoordinate2D.nawabshah
+		case "Hyderabad":
+			targetCoordinate = CLLocationCoordinate2D.hyderabad
+		case "Lahore":
+			targetCoordinate = CLLocationCoordinate2D.lahore
+		case "Sukkar":
+			targetCoordinate = CLLocationCoordinate2D.sukkar
+		default:
+			targetCoordinate = CLLocationCoordinate2D.karachi // Or a default location of your choice
+		}
+
+		let region = MKCoordinateRegion(center: targetCoordinate, span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
 		self._cameraPosition = State(initialValue: .region(region))
 	}
+
 
 	var body: some View {
 		ScrollView {
@@ -39,8 +53,10 @@ struct ListingDetailView: View {
 								.fill(.white)
 								.frame(width: 32, height: 32)
 						}
-						.padding(32)
+						.padding(.leading, 32)
+						.padding(.top, 40)
 				}
+				.offset(y: 20)
 
 			}
 
@@ -230,5 +246,5 @@ struct ListingDetailView: View {
 }
 
 #Preview {
-	ListingDetailView(listing: DeveloperPreview.shared.listings[1])
+	ListingDetailView(listing: DeveloperPreview.shared.listings[0])
 }

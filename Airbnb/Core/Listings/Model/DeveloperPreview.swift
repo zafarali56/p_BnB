@@ -29,7 +29,7 @@ class DeveloperPreview {
 		Listing(
 			id: UUID().uuidString,
 			ownerId: UUID().uuidString,
-			ownerName: "Sarah Khan",
+			ownerName: "Emily travos",
 			ownerImageUrl: "hostFrame2",
 			numberOfGuests: 3,
 			numberOfBedrooms: 3,
@@ -48,29 +48,75 @@ class DeveloperPreview {
 			amenities: [.pool, .kitchen, .wifi, .laundary, .tv, .balcony],
 			type: .villa
 		),
-		//
-		//		// Listing 3 - Modern Townhouse
-		//		Listing(
-		//			id: UUID().uuidString,
-		//			ownerId: UUID().uuidString,
-		//			ownerName: "John Smith",
-		//			ownerImageUrl: "https://www.example.com/john_profile.jpg",
-		//			numberOfBedrooms: 2,
-		//			numberOfBathrooms: 2,
-		//			numberOfBeds: 3,
-		//			pricePerNight: 120,
-		//			priePerNight: 120,
-		//			latitude: 24.9200,
-		//			longitude: 67.1113,
-		//			address: "Block 13D, Gulshan-e-Iqbal",
-		//			city: "Karachi",
-		//			state: "Sindh",
-		//			title: "Modern Townhouse near City Centre",
-		//			rating: 4.5,
-		//			features: [.selfCheckIn, .superHost],
-		//			amenities: [.kitchen, .wifi, .laundary, .tv, .office],
-		//			type: .townHouse
-		//		)
+		Listing(
+			id: UUID().uuidString,
+			ownerId: UUID().uuidString,
+			ownerName: "Bella",
+			ownerImageUrl: "hostFrame2",
+			numberOfGuests: 5,
+			numberOfBedrooms: 2,
+			numberOfBathrooms: 2,
+			numberOfBeds: 3,
+			pricePerNight: 120,
+			latitude: 24.9200,
+			longitude: 67.1113,
+			imageURLs: ["listing3-2", "listing3-1", "listing3-4", "listing3-3"],
+			address: "Block 13D, Gulshan-e-Iqbal",
+			city: "Karachi",
+			state: "Sindh",
+			title: "Modern Townhouse near City Centre",
+			rating: 4.5,
+			features: [.selfCheckIn, .superHost],
+			amenities: [.kitchen, .wifi, .laundary, .tv, .office],
+			type: .townHouse
+		),
+
+		Listing(
+			id: UUID().uuidString,
+			ownerId: UUID().uuidString,
+			ownerName: "Zafar ali",
+			ownerImageUrl: "hostFrame",
+			numberOfGuests: 4,
+			numberOfBedrooms: 2,
+			numberOfBathrooms: 1,
+			numberOfBeds: 2,
+			pricePerNight: 8000,
+			latitude: 24.8988, // Sample coordinates (adjust for desired location)
+			longitude: 67.0519,
+			imageURLs: ["listing4-5", "listing4-4", "listing4-2", "listing4-1"],
+			address: "234 Hillside Drive",
+			city: "Hyderabad",
+			state: "Sindh",
+			title: "Cozy Cottage in Scenic Location",
+			rating: 4.0,
+			features: [.selfCheckIn, .superHost], // No special features
+			amenities: [.kitchen, .wifi, .tv],
+			type: .villa
+		),
+
+		// Listing 5 - Luxury Penthouse
+		Listing(
+			id: UUID().uuidString,
+			ownerId: UUID().uuidString,
+			ownerName: "Zafar Ali",
+			ownerImageUrl: "hostFrame",
+			numberOfGuests: 2,
+			numberOfBedrooms: 1,
+			numberOfBathrooms: 1,
+			numberOfBeds: 1,
+			pricePerNight: 25000,
+			latitude: 24.8309, // Sample coordinates (adjust for desired location)
+			longitude: 67.0329,
+			imageURLs: ["listing5-3", "listing5-5", "listing5-2", "listing5-3", "listing-5-6"],
+			address: "567 Skyline Boulevard",
+			city: "Karachi",
+			state: "Sindh",
+			title: "Luxury Penthouse with City Views",
+			rating: 4.8,
+			features: [.selfCheckIn, .superHost],
+			amenities: [.kitchen, .wifi,],
+			type: .townHouse
+		)
 
 	]
 }

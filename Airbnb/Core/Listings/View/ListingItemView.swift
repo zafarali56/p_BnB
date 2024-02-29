@@ -16,33 +16,33 @@ struct ListingItemView: View {
 				.frame(height: 280)
 				.clipShape(RoundedRectangle(cornerRadius: 15))
 			//listing details
-			
+
 			HStack(alignment: .top){
 				//Details
 				VStack(alignment: .leading) {
 					Text("\(listing.city), \(listing.state)")
 						.fontWeight(.semibold)
 						.foregroundStyle(.black)
-					Text("12 Miles away")
+					Text("9 Miles away")
 						.foregroundStyle(.gray)
-					Text("Nov 3 - 10")
+					Text("Dec-Oct")
 						.foregroundStyle(.gray)
 					HStack (spacing: 4){
-						Text ("\(listing.pricePerNight)")
+						Text ("\(listing.pricePerNight)-Rupee")
 							.fontWeight(.semibold)
 						Text ("Per Night")
+							.font(.callout)
 					}
 					.foregroundStyle(.black)
 				}
 				Spacer()
 				//Ratings
-				
 				Ratings(listing: listing)
 					.font(.footnote)
-				
-				
+
+
 			}
-			
+
 		}
 	}
 }
