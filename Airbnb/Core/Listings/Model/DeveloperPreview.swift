@@ -83,7 +83,7 @@ class DeveloperPreview {
 			pricePerNight: 8000,
 			latitude: 24.8988, // Sample coordinates (adjust for desired location)
 			longitude: 67.0519,
-			imageURLs: ["listing4-5", "listing4-4", "listing4-2", "listing4-1"],
+			imageURLs: ["listing4-4", "listing4-3", "listing4-2", "listing4-1", "listing4-5"],
 			address: "234 Hillside Drive",
 			city: "Hyderabad",
 			state: "Sindh",
@@ -107,7 +107,7 @@ class DeveloperPreview {
 			pricePerNight: 25000,
 			latitude: 24.8309, // Sample coordinates (adjust for desired location)
 			longitude: 67.0329,
-			imageURLs: ["listing5-3", "listing5-5", "listing5-2", "listing5-3", "listing-5-6"],
+			imageURLs: ["listing5-1", "listing5-2", "listing5-3", "listing5-4", "listing5-5", "listing-5-6"],
 			address: "567 Skyline Boulevard",
 			city: "Karachi",
 			state: "Sindh",
