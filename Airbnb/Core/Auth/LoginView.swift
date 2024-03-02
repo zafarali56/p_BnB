@@ -17,19 +17,30 @@ struct LoginView: View {
 				Image("LoginImage")
 					.resizable()
 					.scaledToFill()
-					.frame(width: 100, height: 60)
-					.padding(.vertical, 32)
-					.padding(.top, 200)
+					.frame(width: 0, height: 75)
+					.padding(.vertical, 50)
+					.padding(.top, 100)
+
 
 
 				//form field
-				VStack (spacing: 24) {
-					InputView(text: $email, title: "Email address", placeHolder: "name@expample.com")
+				VStack (spacing: 20) {
+					InputView(text: $email, title: "", placeHolder: "Email")
 						.autocapitalization(.none)
+						.padding(.horizontal, 20)
+						.background(
+							RoundedRectangle(cornerRadius: 50)
+								.stroke(Color.gray, lineWidth: 1)
+							)
+					InputView(text: $password, title: "", placeHolder: "Password")
+						.padding(.horizontal, 20)
+						.background(
+							RoundedRectangle(cornerRadius: 50)
+								.stroke(Color.gray, lineWidth: 1)
+							)
 
-					InputView(text: $password, title: "Password", placeHolder: " Enter your password", IsSecureField: true)
 				}
-				.padding(.horizontal, 100)
+				.padding(.horizontal, 80)
 
 
 				Button {
@@ -40,11 +51,12 @@ struct LoginView: View {
 							.fontWeight(.semibold)
 						Image(systemName: "arrow.right")
 					}
-					.frame(width: UIScreen.main.bounds.width - 150, height: 50)
+					.frame(width: UIScreen.main.bounds.width - 160, height: 55 )
 				}
 				.foregroundColor(.white)
-				.background(Color(.systemRed))
+				.background(Color(.pink))
 				.clipShape(RoundedRectangle(cornerRadius: 50))
+				.padding(.vertical, 10)
 
 				Spacer()
 				

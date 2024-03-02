@@ -19,16 +19,13 @@ struct WishlistView: View {
 						.font(.footnote)
 
 				}
-				Button{
-					print("Log in")
-
-				}label: {
+				NavigationLink(destination: LoginView()) {
 					Text("Log in")
-						.foregroundStyle(.white)
+						.foregroundColor(.white)
 						.font(.subheadline)
 						.fontWeight(.semibold)
 						.frame(width: 360, height: 48)
-						.background(.pink)
+						.background(Color.pink)
 						.clipShape(RoundedRectangle(cornerRadius: 50))
 				}
 				Spacer()
