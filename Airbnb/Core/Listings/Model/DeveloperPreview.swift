@@ -29,7 +29,7 @@ class DeveloperPreview {
 		Listing(
 			id: UUID().uuidString,
 			ownerId: UUID().uuidString,
-			ownerName: "Emily travos",
+			ownerName: "Emily",
 			ownerImageUrl: "hostFrame2",
 			numberOfGuests: 3,
 			numberOfBedrooms: 3,

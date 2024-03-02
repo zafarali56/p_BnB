@@ -83,6 +83,7 @@
 		9E038AB72B90453F0056F615 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9E038ABB2B9046490056F615 /* ExploreService.swift */,
 				9E038AB92B9045C40056F615 /* ExploreViewModel.swift */,
 			);
 			path = View;
@@ -91,7 +92,6 @@
 		9E038AB82B9045420056F615 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				9E038ABB2B9046490056F615 /* ExploreService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
