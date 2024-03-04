@@ -12,39 +12,57 @@ struct ProfileView: View {
 		NavigationStack {
 			VStack {
 				//profile login View
-				VStack (alignment: .leading, spacing: 32) {
-					VStack (alignment: .leading, spacing: 8) {
-						Text("Profile")
-							.font(.largeTitle)
-							.fontWeight(.semibold)
-						Text("Login to get started")
+				List {
+					Section {
+						HStack {
+							Text("ZA")
+								.font(.title)
+								.fontWeight(.semibold)
+								.foregroundStyle(.white)
+								.frame(width: 72, height: 72)
+								.background(Color(.systemGray3))
+								.clipShape(Circle())
+
+							VStack (alignment: .leading, spacing: 4) {
+								Text ("Zafar Ali")
+									.font(.subheadline)
+									.fontWeight(.semibold)
+									.padding(.top, 4)
+
+								Text("Test@gmail.com")
+									.font(.footnote)
+									.accentColor(.gray)
+							}
+						}
 					}
-					NavigationLink(destination: LoginView()) {
-						Text("Log in")
-							.foregroundColor(.white)
-							.font(.subheadline)
-							.fontWeight(.semibold)
-							.frame(width: 360, height: 48)
-							.background(Color.pink)
-							.clipShape(RoundedRectangle(cornerRadius: 50))
+					.clipShape(RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/))
+					Section ("general"){
+						HStack {
+							SettingsRowView(imageName: "gear", title: "Version", tintColor: Color(.pink))
+							Spacer()
+							Text("1.0.0")
+								.font(.subheadline)
+								.foregroundStyle(Color(.systemGray))
+
+						}
 					}
-					HStack {
-						Text("Don't have an account?")
-						Text ("Sign up")
-							.fontWeight(.semibold)
-							.underline()
+
+					Section ("Account")
+					{
+						Button {
+							print("Log out")
+						} label: {
+							SettingsRowView(imageName: "arrow.left.circle.fill", title: "Log out", tintColor: .pink)
+						}
+
+						Button {
+							print("Delete account")
+						} label: {
+							SettingsRowView(imageName: "xmark.circle.fill", title: "Delete account", tintColor: .red)
+						}
 					}
-					.font(.caption)
 				}
-				//profile options
-				VStack (spacing: 24)
-				{
-					ProfileOptionRowView(imageName: "gear", title: "Settings")
-					ProfileOptionRowView(imageName: "gear", title: "Accessibility")
-					ProfileOptionRowView(imageName: "questionmark.circle", title: "Visit the help center")
-					
-				}
-				.padding(.vertical)
+				.clipShape(RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/))
 				
 			}
 			.padding()

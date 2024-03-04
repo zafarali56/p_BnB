@@ -31,13 +31,13 @@ struct LoginView: View {
 						.background(
 							RoundedRectangle(cornerRadius: 50)
 								.stroke(Color.gray, lineWidth: 1)
-							)
+						)
 					InputView(text: $password, title: "", placeHolder: "Password")
 						.padding(.horizontal, 20)
 						.background(
 							RoundedRectangle(cornerRadius: 50)
 								.stroke(Color.gray, lineWidth: 1)
-							)
+						)
 
 				}
 				.padding(.horizontal, 80)
@@ -47,7 +47,7 @@ struct LoginView: View {
 					print("log user in")
 				} label: {
 					HStack {
-						Text ("SIGN IN")
+						Text ("Log in")
 							.fontWeight(.semibold)
 						Image(systemName: "arrow.right")
 					}
@@ -59,12 +59,22 @@ struct LoginView: View {
 				.padding(.vertical, 10)
 
 				Spacer()
-				
+
+				NavigationLink {
+					SignUp()
+				} label: {
+					HStack (spacing:2) {
+						Text("Don't have an account?")
+						Text("Sign up")
+							.fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+					}
+					.font(.system(size:14))
+
+				}
 			}
 		}
 	}
 }
-
 #Preview {
 	LoginView()
 }
