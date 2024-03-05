@@ -1,17 +1,24 @@
-//
-//  AirbnbApp.swift
-//  Airbnb
-//
-//  Created by Zafar Ali on 26/02/2024.
-//
-
 import SwiftUI
+import Firebase
 
 @main
 struct AirbnbApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-    }
+	@StateObject var viewModel = AuthViewModel()
+
+	init() {
+		FirebaseApp.configure()
+
+		// Only enable the App Check debug provider in debug builds
+		#if DEBUG
+		let providerFactory = AppCheckDebugProviderFactory()
+		AppCheck.setAppCheckProviderFactory(providerFactory)
+		#endif
+	}
+
+	var body: some Scene {
+		WindowGroup {
+			ContentView()
+				.environmentObject(viewModel)
+		}
+	}
 }
