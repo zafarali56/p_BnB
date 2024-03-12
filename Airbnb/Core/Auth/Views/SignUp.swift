@@ -1,22 +1,15 @@
-//
-//  SignUp.swift
-//  Airbnb
-//
-//  Created by Zafar Ali on 02/03/2024.
-//
-
 import SwiftUI
-
 struct SignUp: View {
 	@State private var email = ""
 	@State private var fullName = ""
 	@State private var password = ""
 	@State private var confirmPassword = ""
-	@Environment (\.dismiss) var dismiss
+	@Environment(\.dismiss) var dismiss
 	@EnvironmentObject var viewModel: AuthViewModel
+
 	var body: some View {
 		VStack {
-			//image
+			// Image
 			Image("LoginImage")
 				.resizable()
 				.scaledToFill()
@@ -24,8 +17,8 @@ struct SignUp: View {
 				.padding(.vertical, 50)
 				.padding(.top, 100)
 
-			VStack (spacing: 20) {
-				InputView(text: $fullName, title: "", placeHolder: "Email")
+			VStack(spacing: 20) {
+				InputView(text: $email, title: "Email address", placeHolder: "name@example.com")
 					.autocapitalization(.none)
 					.padding(.horizontal, 20)
 					.background(
@@ -33,20 +26,21 @@ struct SignUp: View {
 							.stroke(Color.gray, lineWidth: 1)
 					)
 
-				InputView(text: $email, title: "", placeHolder: "Full lame")
+				InputView(text: $fullName, title: "Full name", placeHolder: "Enter your name")
 					.padding(.horizontal, 20)
 					.background(
 						RoundedRectangle(cornerRadius: 50)
 							.stroke(Color.gray, lineWidth: 1)
 					)
 
-				InputView(text: $password, title: "", placeHolder: "Password")
+				InputView(text: $password, title: "Password", placeHolder: "Enter your password")
 					.padding(.horizontal, 20)
 					.background(
 						RoundedRectangle(cornerRadius: 50)
 							.stroke(Color.gray, lineWidth: 1)
 					)
-				InputView(text: $confirmPassword, title: "", placeHolder: "Confirm password")
+
+				InputView(text: $confirmPassword, title: "Confirm password", placeHolder: "Confirm Your Password")
 					.padding(.horizontal, 20)
 					.background(
 						RoundedRectangle(cornerRadius: 50)
@@ -57,8 +51,13 @@ struct SignUp: View {
 
 			Button {
 				Task {
-					try await viewModel.createUser(withEmail: email, password: password, fullName: fullName)
-				}
+						do {
+							try await viewModel.createUser(withEmail: email, password: password, fullName: fullName)
+							await viewModel.fetchUser() // Fetch user data after creating user
+						} catch {
+							print("Failed to create user: \(error)")
+						}
+					}
 			} label: {
 				HStack {
 					Text ("Sign up")
@@ -77,19 +76,14 @@ struct SignUp: View {
 			Button {
 				dismiss()
 			} label: {
-				HStack (spacing:3) {
+				HStack(spacing: 3) {
 					Text("Already a user?")
 					Text("Log in")
-						.fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+						.fontWeight(.bold)
 				}
-				.font(.system(size:14))
+				.font(.system(size: 14))
 
 			}
-
 		}
 	}
-}
-
-#Preview {
-	SignUp()
 }
