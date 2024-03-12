@@ -59,6 +59,8 @@ struct LoginView: View {
 				}
 				.foregroundColor(.white)
 				.background(Color(.pink))
+				.disabled(!formIsValid)
+				.opacity(formIsValid ? 1.0 : 0.5)
 				.clipShape(RoundedRectangle(cornerRadius: 50))
 				.padding(.vertical, 10)
 
@@ -77,6 +79,14 @@ struct LoginView: View {
 				}
 			}
 		}
+	}
+}
+//Mark _Form validations
+extension LoginView: AuthenticationFormProtocol {
+	var formIsValid: Bool {
+		return !email.isEmpty
+		&& email.contains("@")
+		&& password.count > 5
 	}
 }
 #Preview {

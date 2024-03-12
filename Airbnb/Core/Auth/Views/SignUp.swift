@@ -40,12 +40,27 @@ struct SignUp: View {
 							.stroke(Color.gray, lineWidth: 1)
 					)
 
-				InputView(text: $confirmPassword, title: "Confirm password", placeHolder: "Confirm Your Password")
-					.padding(.horizontal, 20)
-					.background(
-						RoundedRectangle(cornerRadius: 50)
-							.stroke(Color.gray, lineWidth: 1)
-					)
+				ZStack (alignment: .trailing){
+					InputView(text: $confirmPassword, title: "Confirm password", placeHolder: "Confirm Your Password")
+						.padding(.horizontal, 20)
+						.background(
+							RoundedRectangle(cornerRadius: 50)
+								.stroke(Color.gray, lineWidth: 1)
+						)
+					if !password.isEmpty && !confirmPassword.isEmpty {
+						if password == confirmPassword {
+								Image(systemName: "checkmark.circle.fill")
+								.imageScale(.large)
+								.fontWeight(.bold)
+								.foregroundStyle(Color(.systemGreen))
+						} else {
+							Image(systemName: "xmark.circle.fill")
+							.imageScale(.large)
+							.fontWeight(.bold)
+							.foregroundStyle(Color(.systemRed))
+						}
+					}
+				}
 			}
 			.padding(.horizontal, 80)
 
@@ -68,6 +83,8 @@ struct SignUp: View {
 			}
 			.foregroundColor(.white)
 			.background(Color(.pink))
+			.disabled(!formIsValid)
+			.opacity(formIsValid ? 1.0 : 0.5)
 			.clipShape(RoundedRectangle(cornerRadius: 50))
 			.padding(.vertical, 10)
 
@@ -86,4 +103,18 @@ struct SignUp: View {
 			}
 		}
 	}
+}
+
+extension SignUp: AuthenticationFormProtocol {
+	var formIsValid: Bool {
+		return !email.isEmpty
+		&& email.contains("@")
+		&& password.count > 5
+		&& confirmPassword == password
+		&& !fullName.isEmpty
+
+	}
+}
+#Preview {
+	SignUp()
 }
