@@ -6,7 +6,7 @@ struct SignUp: View {
 	@State private var confirmPassword = ""
 	@Environment(\.dismiss) var dismiss
 	@EnvironmentObject var viewModel: AuthViewModel
-
+	@State private var showSignUp = false
 	var body: some View {
 		VStack {
 			// Image
@@ -68,13 +68,17 @@ struct SignUp: View {
 
 			Button {
 				Task {
-						do {
-							try await viewModel.createUser(withEmail: email, password: password, fullName: fullName)
-							await viewModel.fetchUser() // Fetch user data after creating user
-						} catch {
-							print("Failed to create user: \(error)")
-						}
-					}
+									do {
+										try await viewModel.createUser(withEmail: email, password: password, fullName: fullName)
+
+										// Check if user is available, if so, dismiss the SignUp view
+										if viewModel.currentUser != nil {
+											dismiss()
+										}
+									} catch {
+										print("Failed to create user: \(error)")
+									}
+								}
 			} label: {
 				HStack {
 					Text ("Sign up")
