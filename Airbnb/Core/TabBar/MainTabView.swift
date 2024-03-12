@@ -12,8 +12,6 @@ struct MainTabView: View {
 		TabView {
 			ExploreView ()
 				.tabItem {Label ("Explore", systemImage: "magnifyingglass")}
-			WishlistView()
-				.tabItem {Label ("Wishlists", systemImage: "heart")}
 			ProfileView()
 				.tabItem {Label ("Profile", systemImage: "person")}
 		}

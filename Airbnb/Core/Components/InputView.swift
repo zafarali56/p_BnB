@@ -32,5 +32,5 @@ struct InputView: View {
 }
 
 #Preview {
-	InputView(text: .constant(""), title: "", placeHolder: "Email")
+	InputView(text: .constant(""), title: "", placeHolder: "Email", IsSecureField: true)
 }

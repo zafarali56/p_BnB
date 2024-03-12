@@ -18,9 +18,9 @@ struct LoginView: View {
 				Image("LoginImage")
 					.resizable()
 					.scaledToFill()
-					.frame(width: 0, height: 75)
+					.frame(width: 0, height: 55)
 					.padding(.vertical, 50)
-					.padding(.top, 100)
+					.padding(.top, 50)
 
 
 
@@ -30,13 +30,13 @@ struct LoginView: View {
 						.autocapitalization(.none)
 						.padding(.horizontal, 20)
 						.background(
-							RoundedRectangle(cornerRadius: 50)
+							RoundedRectangle(cornerRadius: 20)
 								.stroke(Color.gray, lineWidth: 1)
 						)
-					InputView(text: $password, title: "", placeHolder: "Password")
+					InputView(text: $password, title: "", placeHolder: "Password", IsSecureField: true)
 						.padding(.horizontal, 20)
 						.background(
-							RoundedRectangle(cornerRadius: 50)
+							RoundedRectangle(cornerRadius: 20)
 								.stroke(Color.gray, lineWidth: 1)
 						)
 
@@ -61,11 +61,9 @@ struct LoginView: View {
 				.background(Color(.pink))
 				.disabled(!formIsValid)
 				.opacity(formIsValid ? 1.0 : 0.5)
-				.clipShape(RoundedRectangle(cornerRadius: 50))
+				.clipShape(RoundedRectangle(cornerRadius: 20))
 				.padding(.vertical, 10)
-
-				Spacer()
-
+				
 				NavigationLink {
 					SignUp()
 				} label: {
@@ -77,6 +75,9 @@ struct LoginView: View {
 					.font(.system(size:14))
 
 				}
+				Spacer()
+
+
 			}
 		}
 	}
