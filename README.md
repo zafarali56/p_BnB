@@ -7,7 +7,6 @@
 - [Overview](#overview)
 - [Features](#features)
 - [Screenshots](#screenshots)
-  - [Light Mode](#light-mode)
 - [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
 
@@ -26,7 +25,6 @@ This repository contains a mobile app built with SwiftUI, replicating the Airbnb
 
 ## Screenshots
 
-### Overview
 
 <img src="./screenshots./../screenshots/Home.png" width="200">
 
