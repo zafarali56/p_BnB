@@ -28,29 +28,27 @@ This repository contains a mobile app built with SwiftUI, replicating the Airbnb
 
 ### Overview
 
-![home](./screenshots./../screenshots/Home.png)
+<img src="./screenshots./../screenshots/Home.png" width="200">
 
-![Place details](./screenshots./../screenshots/PlaceDetail.png)
+<img src="./screenshots./../screenshots/PlaceDetail.png" width="200">
 
-![MapKit](./screenshots./../screenshots/MaptKit.png)
+<img src="./screenshots./../screenshots/MapKit.png" width="200">
 
-![User](./screenshots./../screenshots/User.png)
+<img src="./screenshots./../screenshots/User.png" width="200">
 
-![Login Page](./screenshots./../screenshots/LoginPage.png)
+<img src="./screenshots./../screenshots/LoginPage.png" width="200">
 
-![Sign Up page](./screenshots./../screenshots/SignUpPage.png)
+<img src="./screenshots./../screenshots/SignUpPage.png" width="200">
 
-![Hdden button if char less than <6](./screenshots./../screenshots/HiddenButton.png)
+<img src="./screenshots./../screenshots/HiddenButton.png" width="200">
 
-![Pass and confirm not matching](./screenshots./../screenshots/CharNotMatching.png)
+<img src="./screenshots./../screenshots/CharNotmactching.png" width="200">
 
-![ Case: Matching](./screenshots./../screenshots/CharMatching.png)
+<img src="./screenshots./../screenshots/CharMatching.png" width="200">
 
-![ Search page 1](./screenshots./../screenshots/Search1.png)
-
-![ Search page 2](./screenshots./../screenshots/Search2.png)
-
-![ Search page 3](./screenshots./../screenshots/Search3.png)
+<img src="./screenshots./../screenshots/Search.png" width="200">
+<img src="./screenshots./../screenshots/Search2.png" width="200">
+<img src="./screenshots./../screenshots/Search3.png" width="200">
 
 ## Technologies Used
 
