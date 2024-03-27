@@ -25,25 +25,25 @@ This repository contains a mobile app built with SwiftUI, replicating the Airbnb
 
 ## Screenshots
 
-
+- Home
 <img src="./screenshots./../screenshots/Home.png" width="200">
-
+- Place details
 <img src="./screenshots./../screenshots/PlaceDetail.png" width="200">
-
+- Map and perks
 <img src="./screenshots./../screenshots/MapKit.png" width="200">
-
+- User Details and Logout
 <img src="./screenshots./../screenshots/User.png" width="200">
-
+- Login Page
 <img src="./screenshots./../screenshots/LoginPage.png" width="200">
-
+- Sign Up page
 <img src="./screenshots./../screenshots/SignUpPage.png" width="200">
-
+- Button is Get Shown if password is => 6
 <img src="./screenshots./../screenshots/HiddenButton.png" width="200">
-
+- If new and confirm dont match
 <img src="./screenshots./../screenshots/CharNotmactching.png" width="200">
-
+- If match
 <img src="./screenshots./../screenshots/CharMatching.png" width="200">
-
+- Search and other details
 <img src="./screenshots./../screenshots/Search.png" width="200">
 <img src="./screenshots./../screenshots/Search2.png" width="200">
 <img src="./screenshots./../screenshots/Search3.png" width="200">
